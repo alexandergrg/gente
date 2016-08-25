@@ -9,4 +9,6 @@
  define('APP_TITLE','SIGCOMB');
  define('APP_COPY','&copy; ' . date('Y',time()) .' Derechos Reservados. GADPP - <a href="#"> Desarrollador. Alexander González G. </a>');
 
+ require_once('vendor/autoload.php');
+
  ?>
