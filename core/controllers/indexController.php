@@ -1,5 +1,5 @@
 <?php
 
-include_once('html/index/index.php');
+include_once(HTML_DIR . 'index/index.php');
 
  ?>
