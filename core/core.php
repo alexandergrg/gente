@@ -3,11 +3,35 @@
 /**
  * Nucleo de la Aplicacón lleva las constantes.
  */
+
+
+ /**
+  * CONSTANTE DE LA RUTA BASE
+  */
+ define('APP_URL', 'http://localhost/sistema/');
+
+ /**
+ * CONSTANTES DE DISEÑO
+ */
+ define('APP_TITLE','SIGCOMB');
+ define('APP_COPY','&copy; ' . date('Y',time()) .' Derechos Reservados. GADPP - <a href="#"> Desarrollador. Alexander González G. </a>');
+
+
+
+ /**
+  * CONSTATES DE RUTAS DE CARPETAS
+  */
  define('HTML_DIR','html/');
  define('HTML_OVERALL','html/overall/');
  define('VIEWS_DIR','views/');
- define('APP_TITLE','SIGCOMB');
- define('APP_COPY','&copy; ' . date('Y',time()) .' Derechos Reservados. GADPP - <a href="#"> Desarrollador. Alexander González G. </a>');
+
+/**
+ * CONSTANTES DE LA VIEWS-APP
+ */
+
+ define('APP_JS', VIEWS_DIR . 'app/js/');
+ define('APP_CSS', VIEWS_DIR . 'app/css/');
+ define('APP_IMAGES', VIEWS_DIR . 'app/images/');
 
  require_once('vendor/autoload.php');
 
