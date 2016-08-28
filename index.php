@@ -10,7 +10,7 @@
       include('core/controllers/errorController.php');
     }
   } else {
-    include('core/controllers/indexController.php');
+    include('core/controllers/loginController.php');
   }
 
 

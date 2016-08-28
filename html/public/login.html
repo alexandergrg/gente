@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>SIGCOMB | Ingreso</title>
-
+    <title><?= APP_TITLE ?> | Ingreso</title>
     <!-- Bootstrap -->
     <link href="<?=VIEWS_DIR ?>vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -18,6 +16,12 @@
 
     <!-- Custom Theme Style -->
     <link href="<?=VIEWS_DIR ?>build/css/custom.min.css" rel="stylesheet">
+
+    <script src="<?= APP_JS ?>generales.js">
+
+    </script>
+
+
   </head>
 
   <body class="login">
@@ -27,17 +31,18 @@
 
       <div class="login_wrapper">
         <div class="animate form login_form">
-          <section class="login_content">
-            <form>
+          <section class="login_content" >
+
+            <form onkeypress="runScriptLogin(event)">
               <h1>Login </h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Username" required="" id="user_login" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Password" required="" id="pass_login" />
               </div>
               <div>
-                <a class="btn btn-primary submit" href="index.html">Log in</a>
+                <input class="btn btn-primary submit" type="submit" name="enviar"  value="Enviar" onclick="goLogin()" >
                 <a class="reset_pass" href="#">¿Olvidaste tu Contraseña?</a>
               </div>
 
@@ -47,9 +52,11 @@
                 <p class="change_link">Si eres nuevo |
                   <a href="#signup" class="to_register"> Registrate </a>
                 </p>
-
                 <div class="clearfix"></div>
                 <br />
+                <div id="_AJAX_LOGIN_">
+
+                </div>
 
                 <div>
                   <h1><i class="fa fa-car"></i> <?= APP_TITLE ?></h1>
@@ -61,6 +68,8 @@
             </form>
           </section>
         </div>
+
+
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
@@ -99,5 +108,9 @@
         </div>
       </div>
     </div>
+    <script src="<?= APP_JS ?>login.js">
+
+    </script>
+
   </body>
 </html>
