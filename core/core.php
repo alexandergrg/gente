@@ -44,6 +44,8 @@
  require_once('vendor/autoload.php');
  require_once( CORE_MODELS . 'accesos.php');
  require_once( CORE_MODELS . 'Conexion.php');
+ require_once( CORE_MODELS . 'ORM.php');
+ 
  require_once( CORE_BIN . 'functions/encrypt.php');
 
 

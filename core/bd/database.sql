@@ -12,5 +12,4 @@ CREATE TABLE `sigcombdb`.`users` (
   `permisos` INT(1) NOT NULL DEFAULT '0' ,
   PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
-  -- INGRESO DE USUARIO DE ADMINISTRADOR PARA PRUEBAS DE SISTEMA
-  INSERT INTO `users` (`id`, `user`, `pass`, `email`, `permisos`) VALUES (NULL, 'alexandergrg', 'd41d8cd98f00b204e9800998ecf8427e', 'alexandergrg@hotmail.com', '2');
+  
