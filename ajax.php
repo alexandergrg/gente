@@ -1,5 +1,7 @@
 <?php
 
+  require_once(CORE_DIR . 'core.php');
+
   if ($_POST) {
     switch (isset($_GET['mode']) ? $_GET['mode'] : null) {
       case 'login':
@@ -7,7 +9,7 @@
         break;
 
       default:
-        # code...
+        header('location: index.php')
         break;
     }
 

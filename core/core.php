@@ -33,6 +33,19 @@
  define('APP_CSS', VIEWS_DIR . 'app/css/');
  define('APP_IMAGES', VIEWS_DIR . 'app/images/');
 
+ /**
+  * CONSTANTES DEL NUCLEO CORE-
+  */
+
+  define('CORE_DIR','core/');
+  define('CORE_MODELS','core/models/');
+  define('CORE_BIN','core/bin/');
+
  require_once('vendor/autoload.php');
+ require_once( CORE_MODELS . 'accesos.php');
+ require_once( CORE_MODELS . 'Conexion.php');
+ require_once( CORE_BIN . 'functions/encrypt.php');
+
+
 
  ?>

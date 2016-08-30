@@ -2,6 +2,8 @@
 
   require_once('core/core.php');
 
+  //echo Encrypt('123456');
+
   if (isset($_GET['view'])) {
 
     if (file_exists('core/controllers' . strtolower($_GET['view']) . 'Controller.php')) {
