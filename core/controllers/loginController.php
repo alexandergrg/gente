@@ -1,5 +1,5 @@
 <?php
 
-include_once(HTML_DIR . 'public/login.html');
+include_once(HTML_PUBLIC . '/login.html');
 
  ?>
