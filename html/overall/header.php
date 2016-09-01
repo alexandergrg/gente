@@ -11,16 +11,16 @@
     <title><?= APP_TITLE ?> | Home </title>
 
     <!-- Bootstrap -->
-    <link href="<?=VIEWS_DIR ?>vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=VIEWS ?>vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="<?=VIEWS_DIR ?>vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?=VIEWS ?>vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- jQuery custom content scroller -->
-    <link href="<?=VIEWS_DIR ?>vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <link href="<?=VIEWS ?>vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
 
     <script src="<?= APP_JS ?>generales.js">
 
     </script>
 
     <!-- Custom Theme Style -->
-    <link href="<?=VIEWS_DIR ?>build/css/custom.min.css" rel="stylesheet">
+    <link href="<?=VIEWS ?>build/css/custom.min.css" rel="stylesheet">
   </head>

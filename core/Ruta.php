@@ -1,7 +1,5 @@
 <?php
-/**
- *
- */
+
 class Ruta
 {
   // Propiedad controlador que recibe un array con los controaldores
@@ -22,7 +20,6 @@ class Ruta
     //divide las urls, en ARRAY, dividiendoloes por '/'
     $rutasUri = explode('/',$uri);
     //var_dump($this->_controladores);
-
       if ($uri == '/') {
         //Por el si estamos con rutas principal
         //preguntamos si existe, key '/' que se pasa en rutas.php a los controladores
@@ -50,15 +47,21 @@ class Ruta
     }else {
       $metodoController = $metodo;
     }
-+    $this->incluirControlador($controlador);
+    //echo $metodoController;
+    //echo $controlador;
+    $this->incluirControlador($controlador);
+
 
   }
 
   public function incluirControlador($controlador){
-    if (file_exists(CORE_CONTROLLERS . $controlador . 'php')) {
-      include_once (CORE_CONTROLLERS . $controlador . 'php');
+    //echo 'llegue hasta incluier controladores' . $controlador;
+    if (file_exists(CORE_CONTROLLERS . $controlador . '.php')) {
+      include_once (CORE_CONTROLLERS . $controlador . '.php');
     }else{
-      include_once (CORE_CONTROLLERS . 'errorController.php');
+      //include_once (CORE_CONTROLLERS . 'errorController.php');
+      //echo 'Controlador no encontrado';
+      echo CORE_CONTROLLERS .'errorControlller.php';
     }
 
   }

@@ -2,6 +2,8 @@
 
    define('RUTA_BASE', __DIR__ .'/');
 
+
+   //echo RUTA_BASE;
    require_once('core/core.php');
 
 
