@@ -1,11 +1,12 @@
 <?php
 
-  require_once(CORE_DIR . 'core.php');
+   require_once('core/core.php');
 
   if ($_POST) {
     switch (isset($_GET['mode']) ? $_GET['mode'] : null) {
       case 'login':
-        require('core/bin/ajax/goLogin.php');
+      require('core/bin/ajax/goLogin.php');
+        //echo 'Llego al login';
         break;
 
       default:
