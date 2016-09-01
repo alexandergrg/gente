@@ -37,16 +37,16 @@ class Ruta
         //Por el no envia controladores / Métodos
         //echo 'son controladores';
         $estadoRuta = false;
-        echo $rutasUri[0] .'</br>';
-        echo $rutasUri[1] .'</br>';
+        //echo $rutasUri[0] .'</br>';
+        //echo $rutasUri[1] .'</br>';
         foreach ($this->_controladores as $ruta => $controller) {
           if (trim($ruta,'/') == $rutasUri[0]) {
-            echo 'si esxiste el controlador ' . $controller.'</br>';
+            //echo 'si esxiste el controlador ' . $controller.'</br>';
             $estadoRuta = true;
             $controlador = $controller;
             if (count($rutasUri) > 1) {
             $metodo = $rutasUri[1];
-            echo  $rutasUri[1] .'</br>';
+            //echo  $rutasUri[1] .'</br>';
             }
             $this->setController($metodo,$controlador);
           }
@@ -60,7 +60,7 @@ class Ruta
   }
 
   public function setController($metodo,$controlador){
-    echo 'si llega el método al setController' . $metodo;
+    //echo 'si llega el método al setController' . $metodo;
     $metodoController = '';
     if ($metodo =='index' || $metodo =='' || is_null($metodo)) {
       $metodoController = 'index';

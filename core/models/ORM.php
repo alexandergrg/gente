@@ -66,5 +66,10 @@ class ORM extends \Conexion
     * Final del getProcedure
     */
 
+  public static function rows($procedure, $key = null, $parametro = null){
+    $arrayRegistros = Self::getProcedure($procedure);
+    return count($arrayRegistros);
+  }
+
 }
 ?>

@@ -9,7 +9,7 @@ class loginController
 {
 
   public function index(){
-    echo 'Dentro del metodo index';
+    include_once(HTML_PUBLIC . '/login.html');
   }
 }
 

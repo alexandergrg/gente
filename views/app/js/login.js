@@ -17,8 +17,8 @@ function goLogin(){
         result += '<strong>Conectado...!</strong> Estamos redireccionadote.';
         result += '</div>';
         __('_AJAX_LOGIN_').innerHTML = result;
-        //location.href='core/controllers/indexController.php';
-        location.reload();
+        location.href='localhost/sistema/admin';
+
 
       }else{
         __('_AJAX_LOGIN_').innerHTML = connect.responseText;
