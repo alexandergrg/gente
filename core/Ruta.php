@@ -35,12 +35,32 @@ class Ruta
         }
       }else{
         //Por el no envia controladores / Métodos
-        echo 'Controladores';
+        //echo 'son controladores';
+        $estadoRuta = false;
+        echo $rutasUri[0] .'</br>';
+        echo $rutasUri[1] .'</br>';
+        foreach ($this->_controladores as $ruta => $controller) {
+          if (trim($ruta,'/') == $rutasUri[0]) {
+            echo 'si esxiste el controlador ' . $controller.'</br>';
+            $estadoRuta = true;
+            $controlador = $controller;
+            if (count($rutasUri) > 1) {
+            $metodo = $rutasUri[1];
+            echo  $rutasUri[1] .'</br>';
+            }
+            $this->setController($metodo,$controlador);
+          }
+        }
+
+        if ($estadoRuta == false) {
+          die ('Error en la ruta');
+        }
       }
     //var_dump($rutasUri);
   }
 
   public function setController($metodo,$controlador){
+    echo 'si llega el método al setController' . $metodo;
     $metodoController = '';
     if ($metodo =='index' || $metodo =='' || is_null($metodo)) {
       $metodoController = 'index';
@@ -48,8 +68,22 @@ class Ruta
       $metodoController = $metodo;
     }
     //echo $metodoController;
-    //echo $controlador;
+    //echo $controlador; //Incluir el controlador
     $this->incluirControlador($controlador);
+
+    //Preguntamos si existe la clase dentro del controlador con el mismo nombre
+    if (class_exists($controlador)) {
+      $claseControlador = new $controlador;
+      //Is Callable sirve para pregunta si el metodo existe
+      if (is_callable(array($claseControlador, $metodoController))) {
+        // si existe llamanos al metodo de la clase que estamos pasando
+        $claseControlador->$metodoController();
+      }else{
+        die('el Método no existe');
+      }
+    }else{
+      die('no existe la clase');
+    }
 
 
   }
@@ -59,9 +93,9 @@ class Ruta
     if (file_exists(CORE_CONTROLLERS . $controlador . '.php')) {
       include_once (CORE_CONTROLLERS . $controlador . '.php');
     }else{
-      //include_once (CORE_CONTROLLERS . 'errorController.php');
-      //echo 'Controlador no encontrado';
-      echo CORE_CONTROLLERS .'errorControlller.php';
+      include_once (CORE_CONTROLLERS . 'errorController.php');
+      //echo 'error al no existe el archivo del controlador';
+      //echo CORE_CONTROLLERS .'errorControlller.php';
     }
 
   }

@@ -1,5 +1,5 @@
 <?php
 
-include_once(HTML_ERROR . '/login.html');
+include_once(HTML_ERROR . 'controlador.html');
 
  ?>
