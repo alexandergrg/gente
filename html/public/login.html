@@ -8,7 +8,7 @@
         <div class="animate form login_form">
           <section class="login_content" >
 
-            <form onkeypress="runScriptLogin(event)">
+            <form >
               <h1>Login </h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" id="user_login" />
@@ -17,7 +17,7 @@
                 <input type="password" class="form-control" placeholder="Password" required="" id="pass_login" />
               </div>
               <div>
-                <input class="btn btn-primary submit" type="submit" name="enviar"  value="Enviar" onclick="goLogin()" >
+                <a class="btn btn-primary submit" onclick="goLogin()" >Enviar</a> 
                 <a class="reset_pass" href="#">¿Olvidaste tu Contraseña?</a>
               </div>
 
@@ -60,7 +60,7 @@
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-primary submit" href="index.html">Enviar</a>
+                <a class="btn btn-primary submit" >Enviar</a>
               </div>
 
               <div class="clearfix"></div>
