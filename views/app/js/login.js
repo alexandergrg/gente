@@ -18,8 +18,6 @@ function goLogin(){
         result += '</div>';
         __('_AJAX_LOGIN_').innerHTML = result;
         location.href='admin';
-
-
       }else{
         __('_AJAX_LOGIN_').innerHTML = connect.responseText;
       }

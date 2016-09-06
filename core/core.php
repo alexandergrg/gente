@@ -12,6 +12,7 @@
  define('CORE', RUTA_BASE . 'core/');
  define('CORE_MODELS', CORE . 'models/');
  define('CORE_CONTROLLERS', CORE . 'controllers/');
+ define('CORE_BIN', CORE . 'bin/');
 
  //echo CORE_CONTROLLERS;
  /**
@@ -30,23 +31,23 @@
  //echo VIEWS;
 
  //Inclusion de las archivos para el modelo de datos
- include_once (CORE_MODELS . 'accesos.php');
- include_once (CORE_MODELS . 'Conexion.php');
- include_once (CORE_MODELS . 'ORM.php');
+ require_once (CORE_BIN . 'functions/encrypt.php');
+ require_once (CORE_MODELS . 'accesos.php');
+ require_once (CORE_MODELS . 'Conexion.php');
+ require_once (CORE_MODELS . 'ORM.php');
+ //require_once (CORE_BIN . 'ajax/goLogin.php');
 
+ //echo CORE_MODELS . 'ORM.php';
  //$num = ORM::rows('getAllUsers');
  //ORM::rows('getAllUsers');
  //$num = $modelo->rows('getAllUsers');
  //echo 'Número de registros son ' . $num . '</br>';
- //echo CORE_MODELS . 'ORM.php';
  //exit;
 
 
  //Inclusion de los archivos para el enrutamiento dinámico
- include_once (CORE . 'Ruta.php');
- include_once (CORE_CONTROLLERS . 'rutas.php');
-
-//  require_once( CORE_BIN . 'functions/encrypt.php');
+ require_once (CORE . 'Ruta.php');
+ require_once (CORE_CONTROLLERS . 'rutas.php');
 
 
 
