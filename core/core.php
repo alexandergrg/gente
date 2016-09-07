@@ -39,7 +39,9 @@
 
  //echo CORE_MODELS . 'ORM.php';
  //$num = ORM::rows('getAllUsers');
- //ORM::rows('getAllUsers');
+ //ORM::setProcedure('insertUsers',array('dsanzhez','d41d8cd98f00b204e9800998ecf8427e','dzanchez@sistema.com'));
+ //echo $num = ORM::rowsSesion('getUserByName',array('dsanchez', 'd41d8cd98f00b204e9800998ecf8427e'));
+
  //$num = $modelo->rows('getAllUsers');
  //echo 'Número de registros son ' . $num . '</br>';
  //exit;
