@@ -16,7 +16,7 @@
             </div>
             <div class="profile_info">
               <span>Bienvenido,</span>
-              <h2>Nombre de usuario</h2>
+              <h2> <?php echo $_SESSION['app_session'][0][1] ?> </h2>
             </div>
           </div>
           <!-- /información del usuario en menú -->

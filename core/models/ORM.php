@@ -106,7 +106,7 @@ class ORM extends \Conexion
 
   public static function rowsSesion($procedure, $values = null){
     $arrayRegistros = self::sesionProcedure($procedure, $values);
-    return count($arrayRegistros);
+    return $arrayRegistros;
 
 
   }

@@ -5,11 +5,13 @@
 /**
  *
  */
+
 class indexController
 {
 
   public function index(){
-    echo 'Raiz del proyecto' .'</br>';
+    include_once(HTML . 'index/index.php');
+    //var_dump ($_SESSION['app_session']);
   }
 
 

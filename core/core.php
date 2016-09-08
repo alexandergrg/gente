@@ -21,6 +21,7 @@
  define('HTML',RUTA_BASE . 'html/');
  define('HTML_PUBLIC',HTML . 'public/');
  define('HTML_ERROR',HTML . 'error/');
+ define('HTML_OVERALL',HTML . 'overall/');
  /**
   * CONSTATES DE RUTAS DE VIEWS
   */
