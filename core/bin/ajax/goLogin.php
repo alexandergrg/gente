@@ -1,8 +1,8 @@
 <?php
 
  //$existUser = ORM::rowsSesion('getUserByName',array($_POST['user'], Encrypt($_POST['pass'])));
-ini_set('session.cookie_lifetime',"300");
-ini_set('session.gc_maxlifetime',"300");
+ ini_set('session.cookie_lifetime',"3600");
+ ini_set('session.gc_maxlifetime',"3600");
 session_start();
 if (!empty($_POST['user']) and !empty($_POST['pass'])) {
     $existUser = ORM::rowsSesion('getUserByName',array($_POST['user'], Encrypt($_POST['pass'])));

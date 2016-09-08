@@ -1,13 +1,11 @@
 <?php
-ini_set('session.cookie_lifetime',"300");
-ini_set('session.gc_maxlifetime',"300");
+ini_set('session.cookie_lifetime',"3600");
+ini_set('session.gc_maxlifetime',"3600");
 session_start();
 if (!isset($_SESSION['app_session'])) {
   header('location: /sistema');
 }
-
- ?>
-
+?>
 
 <!DOCTYPE html>
 <html lang="es">
