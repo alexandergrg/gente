@@ -10,8 +10,9 @@ class indexController
 {
 
   public function index(){
-    include_once(HTML . 'index/index.php');
+    //include_once(HTML . 'index/index.php');
     //var_dump ($_SESSION['app_session']);
+    return Vista::crear('index/index');
   }
 
 

@@ -26,7 +26,7 @@
  /**
  * CONSTATES DE RUTAS DE HTML
  */
- define('HTML',RUTA_BASE  . '/views/html/');
+ define('HTML',RUTA_BASE  . 'views/html/');
  define('HTML_PUBLIC',HTML . 'public/');
  define('HTML_ERROR',HTML . 'error/');
  define('HTML_OVERALL',HTML . 'overall/');
@@ -49,6 +49,7 @@
 
 
  //Inclusion de los archivos para el enrutamiento dinámico
+ require_once ('Vista.php');
  require_once (CORE . 'Ruta.php');
  require_once (CORE_CONTROLLERS . 'rutas.php');
 
