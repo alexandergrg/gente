@@ -16,13 +16,6 @@
 
  //echo CORE_CONTROLLERS;
  /**
- * CONSTATES DE RUTAS DE HTML
- */
- define('HTML',RUTA_BASE . 'html/');
- define('HTML_PUBLIC',HTML . 'public/');
- define('HTML_ERROR',HTML . 'error/');
- define('HTML_OVERALL',HTML . 'overall/');
- /**
   * CONSTATES DE RUTAS DE VIEWS
   */
  define('VIEWS_FILE', RUTA_BASE . 'views/');
@@ -30,6 +23,13 @@
  define('VIEWS_APP', VIEWS .'app/');
  define('APP_JS', VIEWS_APP .'js/');
  //echo VIEWS;
+ /**
+ * CONSTATES DE RUTAS DE HTML
+ */
+ define('HTML',RUTA_BASE  . '/views/html/');
+ define('HTML_PUBLIC',HTML . 'public/');
+ define('HTML_ERROR',HTML . 'error/');
+ define('HTML_OVERALL',HTML . 'overall/');
 
  //Inclusion de las archivos para el modelo de datos
  require_once (CORE_BIN . 'functions/encrypt.php');

@@ -6,7 +6,6 @@
 
             <?php include_once (HTML_OVERALL . 'sidebarmenu.php') ?>
 
-            <?php include_once (HTML_OVERALL . 'menufooterbuttons.php') ?>
 
           </div>
         </div>
