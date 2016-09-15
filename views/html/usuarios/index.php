@@ -17,7 +17,7 @@
         <div class="">
           <div class="page-title">
             <div class="title_left">
-              <h3>Panel Principal</h3>
+              <h3>Formulario</h3>
             </div>
 
 
@@ -29,7 +29,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Agregar </h2>
+                  <h2>Administración Usuarios </h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -38,35 +38,83 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                  <div class="">
 
-                                              <div class="" role="tabpanel" data-example-id="togglable-tabs">
-                                                <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                                                  <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Home</a>
-                                                  </li>
-                                                  <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Profile</a>
-                                                  </li>
-                                                  <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Profile</a>
-                                                  </li>
-                                                </ul>
-                                                <div id="myTabContent" class="tab-content">
-                                                  <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
-                                                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                                                      synth. Cosby sweater eu banh mi, qui irure terr.</p>
-                                                  </div>
-                                                  <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
-                                                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                                                      booth letterpress, commodo enim craft beer mlkshk aliquip</p>
-                                                  </div>
-                                                  <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
-                                                    <p>xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                                                      booth letterpress, commodo enim craft beer mlkshk </p>
-                                                  </div>
-                                                </div>
-                                              </div>
+                  <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                      <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Información Personal</a>
+                      </li>
+                      <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Lista</a>
+                      </li>
+
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+
+                        <div class="x_content">
+                          <form class="form-horizontal form-label-left" novalidate>
+                            <div class="item form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="user">Nombre de usuario <span class="required">*</span>
+                              </label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input id="user" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="user" placeholder="Mi usuario" required="required" type="text">
+                              </div>
+                            </div>
+                            <div class="item form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
+                              </label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="email" id="email" name="email" placeholder="micorreo@hotmail.com" required="required" class="form-control col-md-7 col-xs-12">
+                              </div>
+                            </div>
+
+                            <div class="item form-group">
+                              <label for="pass" class="control-label col-md-3">Contraseña</label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input id="pass" type="password" name="pass" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                              </div>
+                            </div>
+                            <div class="item form-group">
+                              <label for="password" class="control-label col-md-3">Confirmar Contraseña</label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class="control-label col-md-3">Perdil de Usuario</label>
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select class="select2_single form-control" tabindex="-1">
+                                  <option></option>
+                                  <option value="1">Administrador</option>
+                                  <option value="2">Invitado</option>
+                                  <option value="3">Otro Perfil</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                              <div class="col-md-6 col-md-offset-3">
+                                <button type="submit" class="btn btn-primary">Cancelar</button>
+                                <button id="send" type="submit" class="btn btn-success">Enviar</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+
+
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
 
                 </div>
-              </div>
             </div>
           </div>
         </div>

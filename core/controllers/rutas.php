@@ -4,6 +4,7 @@
 $rutas = new Ruta(array(
   '/' =>'loginController',
   '/inicio' =>'indexController',
+  '/v-livianos' =>'vehiculoLivianosController',
   '/usuarios' =>'usuariosController',
 ));
 ?>

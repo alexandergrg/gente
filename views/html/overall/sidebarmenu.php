@@ -11,9 +11,9 @@
       </li>
       <li><a><i class="fa fa-university"></i> Bienes  <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="form.html"> <i class="fa fa-car" ></i> Vehículos Livianos</a></li>
-          <li><a href="form_advanced.html"> <i class="fa fa-truck" ></i> Vehículos Pesado </a></li>
-          <li><a href="form_validation.html"> <i class="fa fa-train" ></i> Equipo Caminero</a></li>
+          <li><a href="v-livianos"> <i class="fa fa-car" ></i> Vehículos Livianos</a></li>
+          <li><a href="v-pesados"> <i class="fa fa-truck" ></i> Vehículos Pesado </a></li>
+          <li><a href="v-camineros"> <i class="fa fa-train" ></i> Equipo Caminero</a></li>
         </ul>
       </li>
 
