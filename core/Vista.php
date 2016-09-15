@@ -9,6 +9,7 @@ class Vista
   public static function crear($ruta,$key = null, $value= null)
   {
     //echo HTML . $ruta;
+
     $arrayRuta = explode('/', $ruta);
     $archivo = $arrayRuta[count($arrayRuta)-1];
     $archivoRuta = $ruta . '.php';

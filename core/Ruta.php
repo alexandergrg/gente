@@ -89,6 +89,7 @@ class Ruta
   }
 
   public function incluirControlador($controlador){
+     
     //echo 'llegue hasta incluier controladores' . $controlador;
     if (file_exists(CORE_CONTROLLERS . $controlador . '.php')) {
       include_once (CORE_CONTROLLERS . $controlador . '.php');

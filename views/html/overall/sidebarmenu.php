@@ -44,7 +44,7 @@
         <ul class="nav child_menu">
             <li><a> <i class="fa fa-users"></i> Usuarios<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                <li><a href="#level2_1">Agregar</a>
+                <li><a href="usuarios">Agregar</a>
                 </li>
                 <li><a href="#level2_2">Perfiles y Permisos</a>
                 </li>

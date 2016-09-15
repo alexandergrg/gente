@@ -17,7 +17,7 @@ function goLogin(){
         result += '<strong>Conectado...!</strong> Estamos redireccionadote.';
         result += '</div>';
         __('_AJAX_LOGIN_').innerHTML = result;
-        location.href='admin';
+        location.href='inicio';
       }else{
         __('_AJAX_LOGIN_').innerHTML = connect.responseText;
       }
