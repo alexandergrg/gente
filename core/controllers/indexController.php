@@ -12,7 +12,27 @@ class indexController
   public function index(){
     //include_once(HTML . 'index/index.php');
     //var_dump ($_SESSION['app_session']);
-    return Vista::crear('index/index');
+    $usuarios = array(
+      1=>array(
+        'nombre'=>'Alexander',
+        'apellidos'=>'Gonzalez',
+      ),
+      2=>array(
+        'nombre'=>'Alexander',
+        'apellidos'=>'Gonzalez',
+      ),
+      3=>array(
+        'nombre'=>'Alexander',
+        'apellidos'=>'Gonzalez',
+      ),
+      4=>array(
+        'nombre'=>'Alexander',
+        'apellidos'=>'Gonzalez',
+      ),
+    );
+    return Vista::crear('index/index',array(
+      'us'=>$usuarios
+    ));
   }
 
 

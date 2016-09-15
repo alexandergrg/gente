@@ -1,4 +1,3 @@
-
   <?php include_once(HTML_OVERALL .'header.php'); ?>
 
     <?php include_once(HTML_OVERALL . 'menuprofileinf.php') ?>
@@ -11,6 +10,7 @@
         </div>
 
       <?php include_once (HTML_OVERALL .'topnav.php') ?>
+
 
         <!-- Contenido de la Pagina - page content -->
         <div class="right_col" role="main">
@@ -57,7 +57,11 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Add content to the page ...
+                      Add content to the page ... </br>
+                      <?php
+                      echo json_encode($us);
+
+                       ?>
                   </div>
                 </div>
               </div>
