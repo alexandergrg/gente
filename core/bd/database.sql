@@ -31,7 +31,7 @@ CREATE TABLE usuarios (
 	idperfiles INT(255) NOT NULL,
   CONSTRAINT pk_usuarios  PRIMARY KEY (id),
 	CONSTRAINT uq_usuario UNIQUE(usuario),
-	CONSTRAINT fk_usuarios_perfiles FOREIGN KEY(idPerfiles) REFERENCES perfiles (id)
+	CONSTRAINT fk_usuarios_perfiles FOREIGN KEY(idperfiles) REFERENCES perfiles (id)
 															ON UPDATE RESTRICT ON DELETE RESTRICT
 );
 
@@ -58,6 +58,6 @@ CREATE TABLE usuarios (
 
 -- AGREGACION DE CAMPO IDFUNCIONARIOS EN LA TABLA USUARIOS
 ALTER TABLE usuarios
-ADD COLUMN idfuncionarios  int(255) NULL AFTER idPerfiles;
+ADD COLUMN idfuncionarios  int(255) NULL AFTER idperfiles;
 
 ALTER TABLE usuarios ADD CONSTRAINT fk_usuarios_funcionarios FOREIGN KEY (idfuncionarios) REFERENCES funcionarios (id) ON DELETE RESTRICT ON UPDATE RESTRICT;
