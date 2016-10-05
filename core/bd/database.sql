@@ -1,4 +1,8 @@
 
+-- CREAR EL USUARIO QUE ADMINISTRARÀ LA BASE DE DATOS
+
+-- CREATE USER is_sigcombdb IDENTIFIED BY 'admin123456';
+
 -- CREAR LA BASE DE DATOS CON EL COTEJAMIENTO
 
 -- CREATE DATABASE `sigcombdb` DEFAULT CHARSET=utf8 COLLATE utf8_spanish_ci;
@@ -24,7 +28,7 @@ CREATE TABLE usuarios (
   pass VARCHAR(100) NOT NULL ,
   correo VARCHAR(50) NOT NULL ,
 	estado INT(1) NOT  NULL DEFAULT 1,
-	idPerfiles INT(255) NOT NULL,
+	idperfiles INT(255) NOT NULL,
   CONSTRAINT pk_usuarios  PRIMARY KEY (id),
 	CONSTRAINT uq_usuario UNIQUE(usuario),
 	CONSTRAINT fk_usuarios_perfiles FOREIGN KEY(idPerfiles) REFERENCES perfiles (id)
