@@ -13,26 +13,26 @@
 
 CREATE TABLE perfiles(
 	id INT (255) NOT NULL AUTO_INCREMENT ,
-  nombre VARCHAR(50) NOT NULL,
-  permiso INT(1),
-  estado INT(1) NOT NULL DEFAULT 1,
-  CONSTRAINT pk_perfiles PRIMARY KEY (id),
-  CONSTRAINT uq_nombre UNIQUE (nombre)
+	nombre VARCHAR(50) NOT NULL,
+	permiso INT(1),
+	estado INT(1) NOT NULL DEFAULT 1,
+	CONSTRAINT pk_perfiles PRIMARY KEY (id),
+	CONSTRAINT uq_nombre UNIQUE (nombre)
 );
 
 --  CREACION DE LA TABLA USUARIOS
 
 CREATE TABLE usuarios (
 	id INT(255) NOT NULL AUTO_INCREMENT ,
-  usuario VARCHAR(50) NOT NULL ,
-  pass VARCHAR(100) NOT NULL ,
-  correo VARCHAR(50) NOT NULL ,
+	usuario VARCHAR(50) NOT NULL ,
+	pass VARCHAR(100) NOT NULL ,
+	correo VARCHAR(50) NOT NULL ,
 	estado INT(1) NOT  NULL DEFAULT 1,
 	idperfiles INT(255) NOT NULL,
-  CONSTRAINT pk_usuarios  PRIMARY KEY (id),
+	CONSTRAINT pk_usuarios  PRIMARY KEY (id),
 	CONSTRAINT uq_usuario UNIQUE(usuario),
 	CONSTRAINT fk_usuarios_perfiles FOREIGN KEY(idperfiles) REFERENCES perfiles (id)
-															ON UPDATE RESTRICT ON DELETE RESTRICT
+									ON UPDATE RESTRICT ON DELETE RESTRICT
 );
 
 
