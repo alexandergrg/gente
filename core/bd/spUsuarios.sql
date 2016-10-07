@@ -1,16 +1,30 @@
 -- Procedimiento almacenado para listar los usuarios
-
 DELIMITER //
-CREATE PROCEDURE spUsuariosListar()
+CREATE PROCEDURE spUsuariosPerfilesLista()
 BEGIN
-	SELECT * FROM usuarios;
+	SELECT u.id, u.usuario , u.correo , u.estado, p.id AS idperfil, p.nombre AS perfil , p.estado
+    FROM usuarios AS u INNER JOIN perfiles AS p
+    ON u.idperfiles = p.id
+    WHERE u.estado = 1 ;
 END;
-
 //
+
+--  Procedimiento almacenado para comprobar si existe usuario por correo o usuarios
+DELIMITER //
+CREATE PROCEDURE spUsuarioExiste(
+	_login VARCHAR(50),
+	_pass VARCHAR(100)
+)
+BEGIN
+	SELECT * FROM usuarios
+    WHERE ( upper(usuario) = upper(_login) OR upper(correo) = upper(_login)) AND (pass = _pass );
+END;
+//
+
+
 
 -- Procedimiento almacenado para insertar usuarios
 DELIMITER //
-
 CREATE PROCEDURE spUsuariosInsertar(
 	_usuario VARCHAR(50),
     _pass VARCHAR(100),
@@ -23,6 +37,5 @@ BEGIN
 END;
 
 //
-
 
 CALL spUsuariosInsertar('superadmin', '13456', 'administrador@correo.com', 1);

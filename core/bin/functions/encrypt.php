@@ -1,5 +1,7 @@
 <?php
 
+// 123456 = c0784027b45aa11e848a38e890f8416c
+
 function Encrypt ($string){
   $long = strlen($string);
   for ($i=0; $i < $long; $i++) {

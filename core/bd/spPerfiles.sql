@@ -32,7 +32,6 @@ END;
 //
 
 -- Procedimiento almacenado para comprobar si existe el registro
-
 DELIMITER //
 CREATE PROCEDURE spPerfilesExiste(
 	_nombre VARCHAR(50)
@@ -43,8 +42,6 @@ END;
 //
 
 -- Procedimiento almacenado para editar los registros de perfiles
-
-
 DELIMITER //
 CREATE PROCEDURE spPerfilesActualizar(
 	_id INT (255),
@@ -54,5 +51,13 @@ BEGIN
 	UPDATE perfiles SET
     nombre = _nombre
     WHERE id = _id;
+END;
+//
+
+-- Procedimiento almacenado para mostrar perfiles inactivos
+DELIMITER //
+CREATE PROCEDURE spPerfilesInactivos()
+BEGIN
+	SELECT * FROM perfiles WHERE estado = 0;
 END;
 //
