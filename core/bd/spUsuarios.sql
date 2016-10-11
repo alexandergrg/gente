@@ -38,4 +38,4 @@ END;
 
 //
 
-CALL spUsuariosInsertar('superadmin', '13456', 'administrador@correo.com', 1);
+CALL spUsuariosInsertar('superadmin', 'c0784027b45aa11e848a38e890f8416c', 'administrador@correo.com', 1);

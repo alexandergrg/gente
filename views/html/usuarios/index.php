@@ -107,6 +107,8 @@
                       </div>
                       <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
 
+                        <h3>lISTADO DE USUARIOS</h3>
+
 
 
                       </div>
