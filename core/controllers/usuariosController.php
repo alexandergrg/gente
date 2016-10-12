@@ -11,13 +11,11 @@ class usuariosController
   public function index(){
     //echo 'Estoy en el metodo index delcontroladore usuarios';
 
-
-    $usuPerfiles = ORM::getProcedure('spUsuariosPerfilesLista');
-    //echo json_encode($usuarios);
+    //echo var_dump(ORM::getProcedure('spUsuariosPerfilesLista'));
+    $usuariosPerfiles = ORM::getProcedure('spUsuariosPerfilesLista');
     return Vista::crear('usuarios/index',array(
-      'usuarios'=>$usuPerfiles
+      'users'=>$usuariosPerfiles
     ));
-
   }
 }
 

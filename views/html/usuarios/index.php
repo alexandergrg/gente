@@ -102,17 +102,59 @@
                           </form>
                         </div>
 
-
-
                       </div>
                       <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+                        <!-- Inicio de la tabla -->
+                      <div class="clearfix"></div>
 
-                        <h3>lISTADO DE USUARIOS</h3>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <h2>Tabla de busqueda: <small>Usuarios</small></h2>
+                            <!-- Boton de expancion del panel -->
+                            <ul class="nav navbar-right panel_toolbox">
+                              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                              </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                  <table id="datatable" class="table table-striped table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Usuario</th>
+                                        <th>Correo</th>
+                                        <th>estado</th>
+                                        <th>Perfil</th>
 
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($users as $user) { ?>
+                                        <tr>
+                                          <td> <?php echo $user['id']; ?> </td>
+                                          <td> <?php echo $user['usuario']; ?> </td>
+                                          <td> <?php echo $user['correo']; ?> </td>
+                                          <td> <?php echo $user['estado']; ?> </td>
+                                          <td> <?php echo $user['perfil']; ?> </td>
 
+                                        </tr>
+                                      <?php } ?>
+                                    </tbody>
+                                  </table>
 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-
+                      <!-- Fin de la Tabla -->
+                      </div>
                     </div>
                   </div>
 
