@@ -1,8 +1,8 @@
--- Procedimiento almacenado para listar los usuarios
+- Procedimiento almacenado para listar los usuarios
 DELIMITER //
 CREATE PROCEDURE spUsuariosPerfilesLista()
 BEGIN
-	SELECT u.id, u.usuario , u.correo , u.estado, p.id AS idperfil, p.nombre AS perfil , p.estado
+	SELECT u.id, u.usuario , u.correo , u.estado, p.id AS idperfil, p.nombre AS perfil , p.estado as estadoperfil
     FROM usuarios AS u INNER JOIN perfiles AS p
     ON u.idperfiles = p.id
     WHERE u.estado = 1 ;
