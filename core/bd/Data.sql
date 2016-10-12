@@ -19,3 +19,4 @@ INSERT INTO `sigcombdb`.`usuarios` (`usuario`, `pass`, `correo`, `estado`, `idpe
 INSERT INTO `sigcombdb`.`usuarios` (`usuario`, `pass`, `correo`, `estado`, `idperfiles`) VALUES ('apazmiño', 'c0784027b45aa11e848a38e890f8416c', 'apazmino', '1', '3');
 INSERT INTO `sigcombdb`.`usuarios` (`usuario`, `pass`, `correo`, `estado`, `idperfiles`) VALUES ('mvallejo', 'c0784027b45aa11e848a38e890f8416c', 'mvallejo', '1', '3');
 INSERT INTO `sigcombdb`.`usuarios` (`usuario`, `pass`, `correo`, `estado`, `idperfiles`) VALUES ('fpacheco', 'c0784027b45aa11e848a38e890f8416c', 'fpacheho', '1', '3');
+INSERT INTO `sigcombdb`.`usuarios` (`usuario`, `pass`, `correo`, `estado`, `idperfiles`) VALUES ('pcano', 'c0784027b45aa11e848a38e890f8416c', 'pcano', '1', '3');

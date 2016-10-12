@@ -26,10 +26,14 @@ if (!isset($_SESSION['app_session'])) {
     <!-- jQuery custom content scroller -->
     <link href="<?=VIEWS ?>vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
 
-    <script src="<?= APP_JS ?>generales.js">
-
-    </script>
+    <script src="<?= APP_JS ?>generales.js">  </script>
 
     <!-- Custom Theme Style -->
     <link href="<?=VIEWS ?>build/css/custom.min.css" rel="stylesheet">
+    <!-- DataTables -->
+    <script src="<?=VIEWS ?>vendors/jquery/dist/jquery.js">  </script>
+    <script src="<?=VIEWS ?>vendors/tablas/js/jquery.dataTables.min.js">  </script>
+    <link href="<?=VIEWS ?>vendors/tablas/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
   </head>

@@ -11,6 +11,11 @@
 
     <?php include_once (HTML_OVERALL .'topnav.php') ?>
 
+    <script>
+    $(document).ready(function(){
+      $('#myTabla').DataTable();
+    });
+    </script>
 
       <!-- Contenido de la Pagina - page content -->
       <div class="right_col" role="main">
@@ -122,7 +127,7 @@
                             <div class="row">
                               <div class="col-sm-12">
                                 <div class="card-box table-responsive">
-                                  <table id="datatable" class="table table-striped table-bordered">
+                                  <table id="myTabla" class="table table-striped table-bordered">
                                     <thead>
                                       <tr>
                                         <th>ID</th>
