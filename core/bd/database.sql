@@ -1,4 +1,4 @@
-
+																																																																																																																																																	ºº
 -- CREAR EL USUARIO QUE ADMINISTRARÀ LA BASE DE DATOS
 
 -- CREATE USER is_sigcombdb IDENTIFIED BY 'admin123456';
@@ -10,30 +10,47 @@
 -- GRANT ALL PRIVILEGES ON sigcombdb.* TO is_sigcombdb WITH GRANT OPTION;
 
 --  CREACION DE LA TABLA PERFILES
+-- Table: sch_seguridad.perfiles
+-- DROP TABLE sch_seguridad.perfiles;
 
-CREATE TABLE perfiles(
-	id INT (255) NOT NULL AUTO_INCREMENT ,
-	nombre VARCHAR(50) NOT NULL,
-	permiso INT(1),
-	estado INT(1) NOT NULL DEFAULT 1,
-	CONSTRAINT pk_perfiles PRIMARY KEY (id),
-	CONSTRAINT uq_nombre UNIQUE (nombre)
+CREATE TABLE sch_seguridad.perfiles
+(
+  id serial NOT NULL,
+  nombre character varying(50) NOT NULL,
+  permiso smallint,
+  estado smallint NOT NULL DEFAULT 1,
+  CONSTRAINT pk_perfiles PRIMARY KEY (id),
+  CONSTRAINT uq_nombre UNIQUE (nombre)
+)
+WITH (
+  OIDS=FALSE
 );
+ALTER TABLE sch_seguridad.perfiles
+  OWNER TO is_sigcombdb;
 
 --  CREACION DE LA TABLA USUARIOS
+-- Table: sch_seguridad.usuarios
+-- DROP TABLE sch_seguridad.usuarios;
 
-CREATE TABLE usuarios (
-	id INT(255) NOT NULL AUTO_INCREMENT ,
-	usuario VARCHAR(50) NOT NULL ,
-	pass VARCHAR(100) NOT NULL ,
-	correo VARCHAR(50) NOT NULL ,
-	estado INT(1) NOT  NULL DEFAULT 1,
-	idperfiles INT(255) NOT NULL,
-	CONSTRAINT pk_usuarios  PRIMARY KEY (id),
-	CONSTRAINT uq_usuario UNIQUE(usuario),
-	CONSTRAINT fk_usuarios_perfiles FOREIGN KEY(idperfiles) REFERENCES perfiles (id)
-									ON UPDATE RESTRICT ON DELETE RESTRICT
+CREATE TABLE sch_seguridad.usuarios
+(
+  id serial NOT NULL,
+  usuario character varying(50) NOT NULL,
+  pass character varying(100) NOT NULL,
+  correo character varying(50) NOT NULL,
+  estado smallint DEFAULT 1,
+  idperfiles smallint NOT NULL,
+  CONSTRAINT pk_usuarios PRIMARY KEY (id),
+  CONSTRAINT fk_usuarios_perfiles FOREIGN KEY (idperfiles)
+      REFERENCES sch_seguridad.perfiles (id) MATCH SIMPLE
+      ON UPDATE RESTRICT ON DELETE RESTRICT,
+  CONSTRAINT uq_usuario UNIQUE (usuario)
+)
+WITH (
+  OIDS=FALSE
 );
+ALTER TABLE sch_seguridad.usuarios
+  OWNER TO is_sigcombdb;
 
 
 --  CREACION DE LA TABLA FUNCIONARIOS

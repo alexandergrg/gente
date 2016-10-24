@@ -10,17 +10,27 @@ END;
 //
 
 --  Procedimiento almacenado para comprobar si existe usuario por correo o usuarios
-DELIMITER //
-CREATE PROCEDURE spUsuarioExiste(
-	_login VARCHAR(50),
-	_pass VARCHAR(100)
-)
-BEGIN
-	SELECT * FROM usuarios
-    WHERE ( upper(usuario) = upper(_login) OR upper(correo) = upper(_login)) AND (pass = _pass );
-END;
-//
+-- Function: sch_seguridad.spusuarioexiste(character varying, character varying)
 
+-- DROP FUNCTION sch_seguridad.spusuarioexiste(character varying, character varying);
+
+CREATE OR REPLACE FUNCTION sch_seguridad.spusuarioexiste(
+    _login character varying,
+    _pass character varying)
+  RETURNS SETOF sch_seguridad.usuarios AS
+$BODY$
+BEGIN
+	SELECT id, usuario, correo, estado, idperfiles
+		WHERE ( upper(usuario) = upper(_login)
+		OR upper(correo) = upper(_login))
+	AND (pass = _pass );
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100
+  ROWS 1000;
+ALTER FUNCTION sch_seguridad.spusuarioexiste(character varying, character varying)
+  OWNER TO is_sigcombdb;
 
 
 -- Procedimiento almacenado para insertar usuarios
