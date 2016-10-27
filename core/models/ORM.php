@@ -20,7 +20,7 @@ class ORM extends \Conexion
    * Procedimiento almacenado para insertar datos
    */
    public static function setProcedure($procedure, $values = null){
-     $query = 'CALL ' . $procedure ;
+     $query = 'CALL' . $procedure ;
      self::Conectar();
      $param = '';
      if (!is_null($values)) {
@@ -50,7 +50,7 @@ class ORM extends \Conexion
      * Procedimiento Almacenado para obtener datos
      */
    public static function getProcedure($procedure, $key = null, $parametro = null){
-     $query = 'CALL ' . $procedure . '()';
+     $query = 'SELECT * FROM ' . $procedure . '()';
      self::Conectar();
      //echo $query;
      $statement = self::$cnx->prepare($query);
@@ -72,7 +72,7 @@ class ORM extends \Conexion
      * como nombre se usuario o correo electrónico, y pass
      */
      public static function sesionProcedure($procedure, $values = null){
-       $query = 'CALL ' . $procedure ;
+       $query = 'SELECT * FROM ' . $procedure ;
        self::Conectar();
        $param = '';
        if (!is_null($values)) {
@@ -85,7 +85,7 @@ class ORM extends \Conexion
         }else{
          $query .= '()';
          }
-         //echo $query;
+        // echo $query;
        $statement = self::$cnx->prepare($query);
        for ($i=0; $i <count($values) ; $i++) {
          $statement->bindParam(':' . $i, $values[$i]);
@@ -107,9 +107,9 @@ class ORM extends \Conexion
   public static function rowsSesion($procedure, $values = null){
     $arrayRegistros = self::sesionProcedure($procedure, $values);
     return $arrayRegistros;
-
-
+    
   }
+
   public static function rows($procedure, $key = null, $parametro = null){
     $arrayRegistros = self::getProcedure($procedure);
     return count($arrayRegistros);
@@ -121,4 +121,7 @@ class ORM extends \Conexion
   }
 
 }
+//echo json_encode ( ORM::sesionProcedure('sch_seguridad.spusuarioexiste',array(
+//          'agonzalez','c0784027b45aa11e848a38e890f8416c'
+//      )));
 ?>

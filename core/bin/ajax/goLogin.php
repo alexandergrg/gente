@@ -5,7 +5,7 @@
  ini_set('session.gc_maxlifetime',"3600");
 session_start();
 if (!empty($_POST['user']) and !empty($_POST['pass'])) {
-    $existUser = ORM::rowsSesion('spUsuarioExiste',array($_POST['user'], Encrypt($_POST['pass'])));
+    $existUser = ORM::rowsSesion('sch_seguridad.spusuarioexiste',array($_POST['user'], Encrypt($_POST['pass'])));
     if (count($existUser) === 1) {
       $_SESSION['app_session'] = $existUser;
       echo 1;

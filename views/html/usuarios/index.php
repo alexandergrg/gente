@@ -5,13 +5,10 @@
 
           <?php include_once (HTML_OVERALL . 'sidebarmenu.php') ?>
 
-
         </div>
       </div>
 
     <?php include_once (HTML_OVERALL .'topnav.php') ?>
-
-
 
       <!-- Contenido de la Pagina - page content -->
       <div class="right_col" role="main">
