@@ -126,19 +126,19 @@
                                         <th>ID</th>
                                         <th>Usuario</th>
                                         <th>Correo</th>
-                                        <th>estado</th>
                                         <th>Perfil</th>
+                                        <th>Permisos</th>
 
                                       </tr>
                                     </thead>
                                     <tbody>
                                         <?php foreach ($users as $user) { ?>
                                         <tr>
-                                          <td> <?php echo $user['id']; ?> </td>
+                                          <td> <?php echo $user['idusuario']; ?> </td>
                                           <td> <?php echo $user['usuario']; ?> </td>
                                           <td> <?php echo $user['correo']; ?> </td>
-                                          <td> <?php echo $user['estado']; ?> </td>
                                           <td> <?php echo $user['perfil']; ?> </td>
+                                          <td> <?php echo $user['permiso']; ?> </td>
 
                                         </tr>
                                       <?php } ?>

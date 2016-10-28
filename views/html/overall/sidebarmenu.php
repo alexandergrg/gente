@@ -16,6 +16,13 @@
           <li><a href="v-camineros"> <i class="fa fa-train" ></i> Equipo Caminero</a></li>
         </ul>
       </li>
+      <li><a><i class="fa fa-users"></i> R.R H.H.  <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="funcionarios"> <i class="fa fa-child" ></i> Funcionarios</a></li>
+          <li><a href="nombramientos"> <i class="fa fa-sitemap" ></i> Nombramientos o Cargos  </a></li>
+
+        </ul>
+      </li>
 
       <li><a><i class="fa fa-bar-chart-o"></i> Consultas <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">

@@ -12,7 +12,7 @@ class usuariosController
     //echo 'Estoy en el metodo index delcontroladore usuarios';
 
     //echo var_dump(ORM::getProcedure('spUsuariosPerfilesLista'));
-    $usuariosPerfiles = ORM::getProcedure('spusuariosperfileslista');
+    $usuariosPerfiles = ORM::getProcedure('sch_seguridad.spusuariosperfileslista');
     return Vista::crear('usuarios/index',array(
       'users'=>$usuariosPerfiles
     ));
