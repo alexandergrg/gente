@@ -6,5 +6,6 @@ $rutas = new Ruta(array(
   '/inicio' =>'indexController',
   '/v-livianos' =>'vehiculoLivianosController',
   '/usuarios' =>'usuariosController',
+  '/combustibles' =>'combustibleController',
 ));
 ?>

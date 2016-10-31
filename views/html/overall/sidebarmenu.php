@@ -1,4 +1,4 @@
-<!-- sidebar menu -->
+1º<!-- sidebar menu -->
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
   <div class="menu_section">
     <h3>Menu Principal</h3>
@@ -16,11 +16,19 @@
           <li><a href="v-camineros"> <i class="fa fa-train" ></i> Equipo Caminero</a></li>
         </ul>
       </li>
+
+      <li><a><i class="glyphicon glyphicon-object-align-bottom"></i> Gasolineras  <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="combustibles"> <i class="glyphicon glyphicon-oil" aria-hidden="true" ></i> Combustibles</a></li>
+          <li><a href="nombramientos"> <i class="glyphicon glyphicon-scale" aria-hidden="true" ></i> Proveedores  </a></li>
+          <li><a href="nombramientos"> <i class="glyphicon glyphicon-list-alt" ></i> Registro de Precios  </a></li>
+        </ul>
+      </li>
+
       <li><a><i class="fa fa-users"></i> R.R H.H.  <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
           <li><a href="funcionarios"> <i class="fa fa-child" ></i> Funcionarios</a></li>
           <li><a href="nombramientos"> <i class="fa fa-sitemap" ></i> Nombramientos o Cargos  </a></li>
-
         </ul>
       </li>
 
